@@ -1,2 +1,4 @@
 # Hikrobot-Flir-Camera-Sync
 It allows for FLIR and Hikrobot cameras to sync and start taping together and matches their timestamps.
+**SET UP**
+You have to have MVS SKD (full package-for developers), MvToolkit (for Hikrobot) and Teledyne Spinnaker SKD (for FLIR). Be sure you have MvCameraControl.dll on path. Check your pc's version of python, and dowload the python extension from teledyne's download page that matches it. Download the two python files, put them in a shared file. In command prompt, cd it to the file and run python dual_record.py (other options in the dual_record.py file) to trigger the cameras to start filming, press Ctrl C to stop it. Run python analyze_sync.py C:\users\[user]\camera_recordings\[file_name] to get the csv files that pair up the frames with timestamps and a match to the pc's clock.
